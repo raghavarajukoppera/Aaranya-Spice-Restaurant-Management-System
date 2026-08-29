@@ -85,3 +85,41 @@ body {
     transition-duration: 0.001ms !important;
   }
 }
+
+
+/* Deployment-friendly responsive polish: the desktop visual system is
+   intentionally preserved while improving touch targets and small screens. */
+@media (max-width: 767px) {
+  html {
+    overflow-x: hidden;
+  }
+
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+  }
+
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .mobile-nav {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+
+  /* Keep wide data tables usable without changing their desktop layout. */
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+}

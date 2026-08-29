@@ -2,6 +2,7 @@ import { ReactNode } from "react";
 import { Role } from "@/lib/types";
 import Sidebar from "./Sidebar";
 import Topbar from "./Topbar";
+import MobileNav from "./MobileNav";
 
 export default function DashboardShell({
   role,
@@ -17,7 +18,8 @@ export default function DashboardShell({
       <Sidebar role={role} />
       <div className="flex min-w-0 flex-1 flex-col">
         <Topbar title={title} />
-        <main className="flex-1 px-3 pb-6">{children}</main>
+        <main className="flex-1 px-3 pb-24 md:pb-6">{children}</main>
+        <MobileNav role={role} />
       </div>
     </div>
   );

@@ -94,3 +94,40 @@ context/        AuthContext, RestaurantContext (orders/tables/kitchen/billing), 
 data/           seed menu, tables, staff
 lib/            types, utils, hardcoded auth
 ```
+
+
+## Deploy to Vercel
+
+This project is optimized for **Vercel + Next.js**. It does not require a database or server environment for the current demo because application data is stored in the browser's `localStorage`.
+
+### 1. Push the updated project to GitHub
+
+From the project folder:
+
+```bash
+npm install
+npm run build
+git add .
+git commit -m "Prepare Aaranya Spice for Vercel"
+git push
+```
+
+### 2. Import the repository into Vercel
+
+In Vercel, choose **Add New → Project**, select the GitHub repository, and deploy it.
+
+Vercel should detect:
+- Framework: Next.js
+- Build command: `npm run build`
+- Node.js: 20
+- Install command: `npm install`
+
+No environment variables are required for the current demo.
+
+### Important data note
+
+The current application uses browser `localStorage`. That means each browser/device has its own demo data; orders created on one device are not automatically visible on another device. For a real restaurant deployment, the next step would be a shared database and server-side authentication/API layer.
+
+### Mobile support
+
+The desktop layout and visual design are preserved. On phones, the dashboard gets a compact bottom navigation bar, larger touch-friendly controls, safe-area spacing, and horizontally scrollable data tables where needed.
