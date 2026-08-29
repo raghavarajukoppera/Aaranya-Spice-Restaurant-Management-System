@@ -80,7 +80,7 @@ export default function LoginPage() {
 
           <div className="relative animate-fade-in">
             <p className="font-display text-3xl italic leading-snug">
-              "Where Every Meal Feels Like Home"
+              &quot;Where Every Meal Feels Like Home&quot;
             </p>
             <p className="mt-4 max-w-sm text-sm text-white/75">
               A single, elegant workspace for your floor, your kitchen, and your books —
