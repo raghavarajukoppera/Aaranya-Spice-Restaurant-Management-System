@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pattern-color: rgba(122, 31, 31, 0.04);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #DDB87F transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: #DDB87F;
+  border-radius: 8px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: #FBF7F0;
+  background-image:
+    radial-gradient(circle at 1px 1px, var(--pattern-color) 1.5px, transparent 0);
+  background-size: 28px 28px;
+  color: #2B211C;
+}
+
+@layer utilities {
+  .glass {
+    background: rgba(255, 255, 255, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  .skeleton {
+    background: linear-gradient(90deg, #EDE4D3 0px, #F7F0E4 40px, #EDE4D3 80px);
+    background-size: 600px;
+    animation: shimmer 1.6s linear infinite;
+  }
+
+  .focus-ring {
+    outline: none;
+  }
+  .focus-ring:focus-visible {
+    outline: 2px solid #C1440E;
+    outline-offset: 2px;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-receipt, #printable-receipt * {
+    visibility: visible;
+  }
+  #printable-receipt {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
