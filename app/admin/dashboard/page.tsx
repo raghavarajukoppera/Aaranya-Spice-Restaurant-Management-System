@@ -67,13 +67,13 @@ export default function AdminDashboardPage() {
 
         <Card className="animate-fade-in flex flex-wrap items-center justify-between gap-3">
           <div>
-            <h2 className="font-display text-lg font-semibold text-ink">Today's Report</h2>
+            <h2 className="font-display text-lg font-semibold text-ink">Today&apos;s Report</h2>
             <p className="text-xs text-ink/45">
               Download revenue, orders, payments, best sellers, and staff attendance for {new Date().toLocaleDateString("en-IN", { day: "numeric", month: "long", year: "numeric" })} as an Excel file.
             </p>
           </div>
           <Button icon={<FileSpreadsheet className="h-4 w-4" />} onClick={handleExport} loading={exporting}>
-            Export Today's Report (Excel)
+            Export Today&apos;s Report (Excel)
           </Button>
         </Card>
 

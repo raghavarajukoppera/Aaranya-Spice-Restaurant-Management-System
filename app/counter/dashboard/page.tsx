@@ -90,7 +90,7 @@ export default function CounterDashboardPage() {
               onClick={handleExport}
               loading={exporting}
             >
-              Export Today's Report
+              Export Today&apos;s Report
             </Button>
             <Button icon={<Plus className="h-4 w-4" />} onClick={() => setModalOpen(true)}>
               New Parcel Order

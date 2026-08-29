@@ -55,7 +55,7 @@ export default function AdminStaffPage() {
             <div>
               <h2 className="font-display text-lg font-semibold text-ink">Team Directory</h2>
               <p className="text-xs text-ink/45">
-                Everyone with access to the Aaranya Spice workspace. Update each person's attendance for today using the dropdown.
+               Everyone with access to the Aaranya Spice workspace. Update each person&apos;s attendance for today using the dropdown.
               </p>
             </div>
             <Button
@@ -65,7 +65,7 @@ export default function AdminStaffPage() {
               onClick={handleExport}
               loading={exporting}
             >
-              Export Today's Report
+              Export Today&apos;s Report
             </Button>
           </div>
           <StaffTable staff={staff} onAttendanceChange={handleAttendanceChange} />
