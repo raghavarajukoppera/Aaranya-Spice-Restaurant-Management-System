@@ -33,7 +33,7 @@ export default function StaffTable({
             <th className="px-4 py-3 font-semibold">Role</th>
             <th className="px-4 py-3 font-semibold">Username</th>
             <th className="px-4 py-3 font-semibold">Employment</th>
-            <th className="px-4 py-3 font-semibold">Today's Attendance</th>
+            <th className="px-4 py-3 font-semibold">Today&apos; Attendance</th>
           </tr>
         </thead>
         <tbody>
